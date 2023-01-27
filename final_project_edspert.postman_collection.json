@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "0c3a4e3f-c754-4451-b058-411bc92d8dc1",
+		"name": "final_project_edspert",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8213807"
+	},
+	"item": [
+		{
+			"name": "artists",
+			"item": [
+				{
+					"name": "all artists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_GO}}/api/artists?limit=10&page=1",
+							"host": [
+								"{{URL_GO}}"
+							],
+							"path": [
+								"api",
+								"artists"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "artist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_GO}}/api/artist/1",
+							"host": [
+								"{{URL_GO}}"
+							],
+							"path": [
+								"api",
+								"artist",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "artist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Maya\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_GO}}/api/artist",
+							"host": [
+								"{{URL_GO}}"
+							],
+							"path": [
+								"api",
+								"artist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "artist",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Raisa XY\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_GO}}/api/artist/7",
+							"host": [
+								"{{URL_GO}}"
+							],
+							"path": [
+								"api",
+								"artist",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "artist",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/artist/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"artist",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "albums",
+			"item": [
+				{
+					"name": "albums",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_GO}}/api/albums?page=1&limit=15",
+							"host": [
+								"{{URL_GO}}"
+							],
+							"path": [
+								"api",
+								"albums"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "15"
+								},
+								{
+									"key": "artist_id",
+									"value": "9",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "album",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_GO}}/api/album/23",
+							"host": [
+								"{{URL_GO}}"
+							],
+							"path": [
+								"api",
+								"album",
+								"23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "album",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"artist_id\": 1,\n    \"title\": \"Hello\",\n    \"price\": 8900\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_GO}}/api/album",
+							"host": [
+								"{{URL_GO}}"
+							],
+							"path": [
+								"api",
+								"album"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "album",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"artist_id\": 8,\n    \"title\": \"Makan enak euy 4\",\n    \"price\": 2000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_GO}}/api/album/23",
+							"host": [
+								"{{URL_GO}}"
+							],
+							"path": [
+								"api",
+								"album",
+								"23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "album",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_GO}}/api/album/24",
+							"host": [
+								"{{URL_GO}}"
+							],
+							"path": [
+								"api",
+								"album",
+								"24"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "songs",
+			"item": [
+				{
+					"name": "songs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_GO}}/api/songs?limit=5&page=1&artist_id=11",
+							"host": [
+								"{{URL_GO}}"
+							],
+							"path": [
+								"api",
+								"songs"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "album_id",
+									"value": "29",
+									"disabled": true
+								},
+								{
+									"key": "artist_id",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "song",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_GO}}/api/song/10",
+							"host": [
+								"{{URL_GO}}"
+							],
+							"path": [
+								"api",
+								"song",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "song",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"album_id\": 5,\n    \"title\": \"Hamlet\",\n    \"lyrics\": \"hallo hallo bandung, ibu kota\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_GO}}/api/song",
+							"host": [
+								"{{URL_GO}}"
+							],
+							"path": [
+								"api",
+								"song"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "song",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"album_id\": 23,\n    \"title\": \"hidup indonesia raya XIII\",\n    \"lyrics\": \"hallo hallo bandung, ibu kota\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_GO}}/api/song/12",
+							"host": [
+								"{{URL_GO}}"
+							],
+							"path": [
+								"api",
+								"song",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "song",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_GO}}/api/song/12",
+							"host": [
+								"{{URL_GO}}"
+							],
+							"path": [
+								"api",
+								"song",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
