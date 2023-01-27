@@ -1,6 +1,8 @@
 package config
 
 import (
+	"os"
+
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 
@@ -10,7 +12,8 @@ import (
 var DB *gorm.DB
 
 func ConnectDatabase() {
-	database, err := gorm.Open(postgres.Open("host=localhost port=5432 user=postgres password= dbname=final_project_edspert sslmode=disable"))
+	dsn := os.Getenv("POSTGRES_URL")
+	database, err := gorm.Open(postgres.Open(dsn))
 
 	if err != nil {
 		panic(err)
